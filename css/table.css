@@ -1,0 +1,90 @@
+.row {
+    display: flex;
+}
+.col-sm-6 {
+    width: 50%;
+    
+}
+.app-content-header {
+    h1 {
+        font-size: 20px;
+    }
+    .breadcrumb {
+        display: flex;
+        justify-content: flex-end;
+        list-style: none;
+        gap: 0.5em;
+        font-size: 12px;
+        > li {
+            &:not(:last-child)::after {
+                content: '/';
+                margin-left: 0.5em;
+            }
+            > a {
+                text-decoration: unset;
+                color: var(--primary);
+            }
+        }
+    }
+}
+
+.card {
+    border: 1px solid var(--gray);
+    border-radius: 5px;
+    .card-header {
+        padding: 15px;
+        border-bottom: 1px solid var(--gray);
+        display: flex;
+        justify-content: space-between;
+        h3 {
+            font-size: 16px;
+        }
+        .input-group {
+            display: flex;
+            align-items: center;
+            border: 1px solid var(--gray);
+            border-radius: 3px;
+            .input-group-text {
+                font-size: 12px;
+                height: 25px;
+                border-right: 1px solid var(--gray);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0 5px;
+            }
+            input {
+                font-size: 12px;
+                padding: 2px 5px;
+                height: 25px;
+                flex: 1;
+                border: unset;
+                &:focus {
+                    outline: 3px solid #0d6efd40;
+                }
+            }
+        }
+    }
+    .card-body {
+        padding: 15px;
+
+        .btn {
+            border: 1px solid var(--secondary);
+            background: transparent;
+            color: var(--secondary);
+            padding: 5px 7px;
+            border-radius: 3px;
+            cursor: pointer;
+            &:hover {
+                background: var(--secondary);
+                color: white;
+            }
+        }
+    }
+    .card-footer {
+        padding: 15px;
+        border-top: 1px solid var(--gray);
+        font-size: 10px;
+        color: var(--secondary);
+    }
+}
