@@ -91,7 +91,6 @@ a {
     .app-header {
         grid-column: 2 / 3;
         grid-row: 1 / 2;
-        background-color: antiquewhite;
         * { color: var(--muted); }
         .container-fluid {
             display: flex;
